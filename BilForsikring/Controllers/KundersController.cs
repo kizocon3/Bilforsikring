@@ -27,7 +27,7 @@ namespace BilForsikring.Controllers
         }
     
         [HttpPost] 
-        public ActionResult AddOrEditAsync(KunderViewModel kunder)
+        public ActionResult AddOrEdit(KunderViewModel kunder)
         {
             if (kunder.Id == null)
             {
@@ -39,7 +39,7 @@ namespace BilForsikring.Controllers
                     var response = client.PostAsync(uri, stringContent).Result;
                     if (response.IsSuccessStatusCode)
                     {
-                        return RedirectToAction("Index");
+                        return RedirectToAction("Prisberegning");
                     }
                 }
 
