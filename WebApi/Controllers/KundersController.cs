@@ -69,16 +69,16 @@ namespace WebApi.Controllers
         }
 
         // POST: api/Kunders
+        [AllowAnonymous]
         [ResponseType(typeof(Kunder))]
+        [HttpPost]
         public async Task<IHttpActionResult> PostKunder(Kunder kunder)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
             var dt = DateTime.Now;
-
             var newKunder = new Kunder()
             {
                 Id = Guid.NewGuid(),
@@ -90,14 +90,13 @@ namespace WebApi.Controllers
                 BilensRegistreringsNummer = kunder.BilensRegistreringsNummer,
                 Created = dt,
             };
-
             db.Kunders.Add(newKunder);
             try
             {
                 int i = await db.SaveChangesAsync();
                 if (i > 0)
                 {
-                    WebApi.CustomHelp.CustomHelper.BuildEmailTemplate(kunder);
+                    CustomHelp.CustomHelper.BuildEmailTemplate(kunder);
                 }
             }
             catch (DbUpdateException)

@@ -12,7 +12,7 @@
     </section>
     <section id="messageConfirmation"></section>
     <section id="beRegConfirmation">
-        @using (Html.BeginForm("AddOrEdit", "Kunders", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        @using (Html.BeginForm("AddOrEditAsync", "Kunders", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
         {
             @Html.AntiForgeryToken()
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
