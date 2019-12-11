@@ -77,8 +77,21 @@ namespace WebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.Kunders.Add(kunder);
+            var dt = DateTime.Now;
 
+            var newKunder = new Kunder()
+            {
+                Id = Guid.NewGuid(),
+                Bonus = kunder.Bonus,
+                Email = kunder.Email,
+                ForNavn = kunder.ForNavn,
+                Etternavn = kunder.Etternavn,
+                PersonNummer = kunder.PersonNummer,
+                BilensRegistreringsNummer = kunder.BilensRegistreringsNummer,
+                Created = dt,
+            };
+
+            db.Kunders.Add(newKunder);
             try
             {
                 int i = await db.SaveChangesAsync();

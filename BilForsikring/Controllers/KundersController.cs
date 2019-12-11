@@ -29,8 +29,8 @@ namespace BilForsikring.Controllers
         [HttpPost] 
         public ActionResult AddOrEdit(KunderViewModel kunder)
         {
-            if (kunder.Id == null)
-            {
+            if (kunder.Id == null || kunder.Id == Guid.Empty)
+            {               
                 using (var client = new HttpClient())
                 {
                    var uri = new Uri("http://localhost:50926/api/kunder");
