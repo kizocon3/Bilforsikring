@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FAGSYSTEMDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Avtaler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Avtalenummer" Type="nvarchar" MaxLength="256" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="KunderID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Kunder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BilensRegistreringsNummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="PersonNummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="ForNavn" Type="nvarchar" MaxLength="250" />
+          <Property Name="Etternavn" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="Bonus" Type="nvarchar" MaxLength="250" />
+          <Property Name="KundeNummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="AvtaleStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Updated" Type="date" />
+        </EntityType>
+        <EntityContainer Name="FAGSYSTEMDBModelStoreContainer">
+          <EntitySet Name="Avtaler" EntityType="Self.Avtaler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kunder" EntityType="Self.Kunder" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FAGSYSTEMDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Avtaler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Avtalenummer" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KunderID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Updated" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Kunder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="BilensRegistreringsNummer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PersonNummer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ForNavn" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Etternavn" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Bonus" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="KundeNummer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AvtaleStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="Updated" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="FAGSYSTEMDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Avtalers" EntityType="Self.Avtaler" />
+          <EntitySet Name="Kunders" EntityType="Self.Kunder" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FAGSYSTEMDBModelStoreContainer" CdmEntityContainer="FAGSYSTEMDBEntities">
+          <EntitySetMapping Name="Avtalers">
+            <EntityTypeMapping TypeName="FAGSYSTEMDBModel.Avtaler">
+              <MappingFragment StoreEntitySet="Avtaler">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Avtalenummer" ColumnName="Avtalenummer" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="KunderID" ColumnName="KunderID" />
+                <ScalarProperty Name="Updated" ColumnName="Updated" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kunders">
+            <EntityTypeMapping TypeName="FAGSYSTEMDBModel.Kunder">
+              <MappingFragment StoreEntitySet="Kunder">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BilensRegistreringsNummer" ColumnName="BilensRegistreringsNummer" />
+                <ScalarProperty Name="PersonNummer" ColumnName="PersonNummer" />
+                <ScalarProperty Name="ForNavn" ColumnName="ForNavn" />
+                <ScalarProperty Name="Etternavn" ColumnName="Etternavn" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+                <ScalarProperty Name="KundeNummer" ColumnName="KundeNummer" />
+                <ScalarProperty Name="AvtaleStatus" ColumnName="AvtaleStatus" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Updated" ColumnName="Updated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

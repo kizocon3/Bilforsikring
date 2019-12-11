@@ -1,0 +1,105 @@
+﻿@model BilForsikring.Models.ViewModel.Forsiking.KunderViewModel
+@{
+    ViewBag.Title = "Pris Beregning";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <section id="titleForsikring">
+        <h1 class="MuseoSans-500">Kjøp bilforsikring</h1>
+        <p>Lorem ipsum dolor sit amet, consectur adispisicing elit, sed do eiusmod</p>
+        <p>tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+    </section>
+    <section id="messageConfirmation"></section>
+    <section id="beRegConfirmation">
+        @using (Html.BeginForm("AddOrEdit", "Kunders", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    @Html.LabelFor(m => m.BilensRegistreringsNr, new { @class = "MuseoSans-500" })
+                    @Html.TextBoxFor(m => m.BilensRegistreringsNr, "(BilensRegistreringsNr)", new { @class = "form-control", @placeholder = "AB 12345" })
+                    @Html.ValidationMessageFor(m => m.BilensRegistreringsNr, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    @Html.LabelFor(m => m.DinBonus, new { @class = "MuseoSans-500" }) <i class="glyphicon glyphicon-info-sign" id="dinBonusInfo"></i>
+                    @Html.DropDownList("DinBonus", (SelectList)ViewBag.PorcentageBonus, "Velg din bonus", new { @class = "form-control", @id = "bonusDropDown" })
+                    @Html.ValidationMessageFor(m => m.DinBonus, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    @Html.LabelFor(m => m.FødselsNumber, new { @class = "MuseoSans-500" })
+                    @Html.TextBoxFor(m => m.FødselsNumber, "(FødselsNumber)", new { @class = "form-control", @placeholder = " " })
+                    @Html.ValidationMessageFor(m => m.FødselsNumber, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-6 col-sm-12 col-xs-12" id="fornavnId">
+                    @Html.LabelFor(m => m.Fornavn, new { @class = "MuseoSans-500" })
+                    @Html.TextBoxFor(m => m.Fornavn, "(Fornavn)", new { @class = "form-control", @placeholder = " " })
+                    @Html.ValidationMessageFor(m => m.Fornavn, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    @Html.LabelFor(m => m.Etternavn, new { @class = "MuseoSans-500" })
+                    @Html.TextBoxFor(m => m.Etternavn, "(Etternavn)", new { @class = "form-control", @placeholder = " " })
+                    @Html.ValidationMessageFor(m => m.Etternavn, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    @Html.LabelFor(m => m.Epost, new { @class = "MuseoSans-500" })
+                    @Html.TextBoxFor(m => m.Epost, "(Epost)", new { @class = "form-control", @id = "epostfield", @placeholder = " " })
+                    @Html.ValidationMessageFor(m => m.Epost, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <button type="submit" id="beregnPrisBtn" class="btn btn-primary">Beregn pris</button>
+                    <button type="button" id="avbryBtn" class="btn btn-default">Avbryt</button>
+                </div>
+            </div>
+        }
+    </section>
+</div>
+<!--Din bonus modal-->
+<div class="modal fade" id="dinBonusModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title MuseoSans-500" id="myModalLabel">Informasjon om din bonus</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12 col-sm-12">
+                        <section>
+                            <article>
+                                <p>
+                                    Some text here ........
+                                </p>
+                            </article>
+                        </section>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Lukk</button>
+                </div>
+            </div>
+        </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/customjquery")

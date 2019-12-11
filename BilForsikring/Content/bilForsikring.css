@@ -1,0 +1,382 @@
+﻿/**
+ * @license
+ * MyFonts Webfont Build ID 3845440, 2019-12-09T09:01:44-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: MuseoSans-500 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/500/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * Licensed pageviews: Unlimited
+ * 
+ * 
+ * 
+ * © 2019 MyFonts Inc
+*/
+/*==========  Desktop First Method  ==========*/
+body {
+    font-family: Arial;
+}
+.form-group
+{
+margin-bottom:50px;
+}
+ label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+@font-face {
+    font-family: 'MuseoSans-500';
+    src: url('/fonts/3AAD40_0_0.eot');
+    src: url('/fonts/3AAD40_0_0.eot?#iefix') format('embedded-opentype'), url('/fonts/3AAD40_0_0.woff2') format('woff2'), url('/fonts/3AAD40_0_0.woff') format('woff'), url('/fonts/3AAD40_0_0.ttf') format('truetype');
+}
+.MuseoSans-500 {
+    font-family: MuseoSans-500;
+    font-weight: 700;
+    font-style: normal;
+    color: #002776;
+}
+.jumbotron
+{
+   margin-top:60px;
+}
+#titleForsikring {padding-bottom:50px;}
+#overskriftForsikring{ padding:10px;}
+#dinBonusInfo { cursor: pointer;}
+.field-validation-error {
+    padding-left: 120px;
+}
+.epostRequired {
+    border: 2px solid red;
+}
+.makeEpostFielddRed{
+    border: 2px solid red;
+}
+/*Start Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    .form-group {
+        margin-bottom: 50px;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 44px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+    .MuseoSans-500 {
+        font-family: MuseoSans-500;
+        font-weight: 700;
+        font-style: normal;
+        color: #002776;
+    }
+
+    .jumbotron {
+        margin-top: 60px;
+    }
+
+    #titleForsikring {
+        padding-bottom: 50px;
+    }
+
+}
+/*End Large Devices, Wide Screens */
+
+/*Start Medium Landscape tablets and medium desktops */
+@media (min-width : 992px) and (max-width: 1199px ) {
+    .form-group {
+        margin-bottom: 50px;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 44px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+    .MuseoSans-500 {
+        font-family: MuseoSans-500;
+        font-weight: 700;
+        font-style: normal;
+        color: #002776;
+    }
+
+    .jumbotron {
+        margin-top: 60px;
+    }
+
+    #titleForsikring {
+        padding-bottom: 50px;
+    }
+}
+/*End Medium Landscape tablets and medium desktops */
+
+/*Start Small Portrait tablets and small desktops */
+@media (min-width : 768px) and (max-width: 991px) {
+    .form-group {
+        margin-bottom: 50px;
+    }
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 44px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+    .MuseoSans-500 {
+        font-family: MuseoSans-500;
+        font-weight: 700;
+        font-style: normal;
+        color: #002776;
+    }
+
+    .jumbotron {
+        margin-top: 60px;
+    }
+
+    #titleForsikring {
+        padding-bottom: 50px;
+    }
+    
+}
+/*End Small Portrait tablets and small desktops */
+
+/*Start Extra Small Landscape phones and portrait tablets 767*/
+@media only screen and (max-width: 767px) {
+    .form-group {
+        margin-bottom: 50px;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 44px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+    .MuseoSans-500 {
+        font-family: MuseoSans-500;
+        font-weight: 700;
+        font-style: normal;
+        color: #002776;
+    }
+
+    .jumbotron {
+        margin-top: 60px;
+    }
+
+    #titleForsikring {
+        padding-bottom: 50px;
+    }
+
+    #fornavnId {
+        padding-bottom: 50px;
+    }
+}
+/*End Extra Small Landscape phones and portrait tablets 767*/
+
+/*Start Extra Small Landscape phones and portrait tablets 690*/
+@media only screen and (max-width: 690px) {
+    .form-group {
+        margin-bottom: 50px;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 44px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+    .MuseoSans-500 {
+        font-family: MuseoSans-500;
+        font-weight: 700;
+        font-style: normal;
+        color: #002776;
+    }
+
+    .jumbotron {
+        margin-top: 60px;
+    }
+
+    #titleForsikring {
+        padding-bottom: 50px;
+    }
+    #fornavnId {
+        padding-bottom: 50px;
+    }
+}
+/* End Extar Small Landscape phones and portrait tablets 690*/
+
+/*Start Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .form-group {
+        margin-bottom: 50px;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 44px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+    .MuseoSans-500 {
+        font-family: MuseoSans-500;
+        font-weight: 700;
+        font-style: normal;
+        color: #002776;
+    }
+
+    .jumbotron {
+        margin-top: 60px;
+    }
+
+    #titleForsikring {
+        padding-bottom: 50px;
+    }
+
+    #fornavnId {
+        padding-bottom: 50px;
+    }
+}
+/*End Extra Small Devices, Phones */
+
+/*Start Custom, iPhone Retina */
+@media (min-width : 320px) and (max-width : 480px ) {
+    .form-group {
+        margin-bottom: 50px;
+    }
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 44px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+    .MuseoSans-500 {
+        font-family: MuseoSans-500;
+        font-weight: 700;
+        font-style: normal;
+        color: #002776;
+    }
+    .jumbotron {
+        margin-top: 60px;
+    }
+    #titleForsikring {
+        padding-bottom: 50px;
+    }
+    #fornavnId{
+        padding-bottom:50px;
+    }
+}
+/*End Custom, iPhone Retina */
